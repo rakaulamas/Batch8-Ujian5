@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Ujian</title>
+<link rel="stylesheet" th:href="@{/contoh.css}"  />
+</head>
+<body>
+	<br>
+	<div>
+		<div class="g-block-1">
+			<div class="block1"  th:each="pertanyaan : ${listpertanyaan}">
+				
+					<p></p>
+					<p th:text="${pertanyaan.pertanyaan1}"></p>
+					<br> <input class="form-check-input" type="radio"
+						name="flexRadioDefault" id="flexRadioDefault1"> <label
+						class="form-check-label" for="flexRadioDefault1"
+						th:text="${pertanyaan.jawaban1}"> </label> <br> <input
+						class="form-check-input" type="radio" name="flexRadioDefault"
+						id="flexRadioDefault1"> <label class="form-check-label"
+						for="flexRadioDefault1" th:text="${pertanyaan.jawaban2}">
+					</label> <br> <input class="form-check-input" type="radio"
+						name="flexRadioDefault" id="flexRadioDefault1"> <label
+						class="form-check-label" for="flexRadioDefault1"
+						th:text="${pertanyaan.jawaban3}"> </label> <br> <input
+						class="form-check-input" type="radio" name="flexRadioDefault"
+						id="flexRadioDefault1"> <label class="form-check-label"
+						for="flexRadioDefault1" th:text="${pertanyaan.jawaban4}">
+					</label>
+				
+			</div>
+		</div>
+		<div class="g-block-2">
+			<div class="block2"  th:each="pertanyaan : ${listpertanyaan}">
+				
+					<img class="img-responsive" width="100" height="100"
+						th:src="@{${pertanyaan.statusGambar}}" />
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>
